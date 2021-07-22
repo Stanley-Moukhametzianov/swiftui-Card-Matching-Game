@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Matching Game
 //
-//  Created by Stanley Moukh on 7/22/21.
+//  Created by Stanley Moukh on 3/19/21.
 //
 
 import UIKit
@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+       let game = EmojiMemoryGame()
+        let contentView = EmojiMemoryGameView(viewModel: game)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
